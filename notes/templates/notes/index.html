@@ -1,0 +1,56 @@
+{% extends "notes/base.html" %}
+{% load static %}
+
+{% block content %}
+<link href='https://css.gg/trash.css' rel='stylesheet'>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" type="text/css" href="{% static 'notes/css/getit.css' %}"/>
+
+<div class="appbar">
+<img src="{% static 'notes/img/logo-getit.png' %}" />
+  <span class="subtitle">Como o Post-it, mas com outro verbo</span>
+</div>
+
+<main class="container"> 
+
+<form class="form-card" method="post">
+  {% csrf_token %}
+  <input id="titulo" type="text" name="titulo" class="form-card-title" placeholder="Título"/>
+  <textarea id="detalhes" name="detalhes" class="autoresize"  placeholder="Digite o conteúdo..."></textarea>
+  <input class="btn" type="submit"/>
+</form>
+
+<div class="card-container">
+  {% for note in notes %}
+
+  <div class="card">
+
+    <form method="post" action="{% url 'update' id=note.id %}">
+      {% csrf_token %} 
+      <button type="submit" id="{{note.id}}">
+        <i class="fa fa-save"></i>
+      </button>
+      <input type="hidden" name="id" value="{{note.id}}" />
+      <input value="{{note.title}}" name="title" class="card-title" key="{{note.id}}"/>
+      <textarea value="{{note.content}}" name="content" class="card-content" key="{{note.id}}"> {{note.content}} </textarea>
+    </form>
+
+    <form method="post" action="{% url 'delete' id=note.id %}">
+      {% csrf_token %}
+      <input type="hidden" name="id" value="{{note.id}}" />
+      <button type="submit">
+        <i class="fa fa-trash"></i>
+      </button>
+    </form>
+    
+  </div>
+
+  {% endfor %}
+
+</div>
+
+</main>
+
+<script type="text/javascript" src="{% static 'notes/script/getit.js' %}"></script>
+
+{% endblock %}
