@@ -8,7 +8,6 @@ img {
    margin: 8px; 
  }
 
- 
  .appbar {
    background-color: #f7d736;
    display: flex;
@@ -50,8 +49,8 @@ img {
  
  .autoresize{
    border: 0;
-   margin-top: 10px;
-   font-size: 13px;
+   margin-top: 11px;
+   font-size: 14px;
  }
  
  .card-container{
@@ -59,16 +58,16 @@ img {
    margin-top: 35px;
    justify-content: space-around;
    flex-wrap: wrap;  
-   margin-left: 50px;
-   margin-right: 50px;
+   margin-left: 55px;
+   margin-right: 55px;
  }
  
  .card{ 
    display: flex;
    flex-direction: column;
    margin-top: 20px;
-   margin-right: 5px;
-   margin-left: 5px;
+   margin-right: 15px;
+   margin-left: 15px;
    border: 5px black; 
    border-width: 10px;
    border-radius: 5px;
@@ -77,11 +76,11 @@ img {
    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.6);
  }
  
- .card-color-1{
+ .card-color-5{
    background-color: rgb(137, 212, 134);
  }
  
- .card-color-2{
+ .card-color-4{
    background-color: rgb(224, 131, 201);
  }
  
@@ -89,58 +88,58 @@ img {
      background-color: rgb(144, 214, 238);
  }
  
- .card-color-4{
+ .card-color-2{
    background-color: rgb(241, 188, 144);
  }
  
- .card-color-5{
+ .card-color-1{
    background-color: rgb(240, 231, 108);
  }
  
- .card-rotation-1{
-   transform: rotate(3deg)
+ .card-rotation-11{
+   transform: rotate(3.5deg)
    
  }
  
- .card-rotation-2{
-   transform: rotate(-3deg)
-   
- }
- 
- .card-rotation-3{
-   transform: rotate(2.5deg)
- }
- 
- .card-rotation-4{
+ .card-rotation-10{
    transform: rotate(-2.5deg)
+   
  }
  
- .card-rotation-5{
-   transform: rotate(-3.5deg)
+ .card-rotation-9{
+   transform: rotate(3deg)
+ }
+ 
+ .card-rotation-8{
+   transform: rotate(-4deg)
+ }
+ 
+ .card-rotation-7{
+   transform: rotate(-2deg)
  }
  
  .card-rotation-6{
-   transform: rotate(3.5deg)
+   transform: rotate(-3.5deg)
  }
 
- .card-rotation-7{
+ .card-rotation-5{
   transform: rotate(3deg)
 }
 
-.card-rotation-8{
-  transform: rotate(-4deg)
+.card-rotation-4{
+  transform: rotate(4.5deg)
 }
 
-.card-rotation-9{
-  transform: rotate(5deg)
-}
-
-.card-rotation-10{
+.card-rotation-3{
   transform: rotate(-1deg)
 }
 
-.card-rotation-11{
-  transform: rotate(4.9deg)
+.card-rotation-2{
+  transform: rotate(-3deg)
+}
+
+.card-rotation-1{
+  transform: rotate(4deg)
 }
  
  .card-title{

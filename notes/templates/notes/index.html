@@ -27,20 +27,20 @@
 
     <form method="post" action="{% url 'update' id=note.id %}">
       {% csrf_token %} 
-      <button type="submit" id="{{note.id}}">
-        <i class="fa fa-save"></i>
-      </button>
+
+      <button type="submit" id="{{note.id}}"> <i class="fa fa-save"></i></button>
       <input type="hidden" name="id" value="{{note.id}}" />
-      <input value="{{note.title}}" name="title" class="card-title" key="{{note.id}}"/>
-      <textarea value="{{note.content}}" name="content" class="card-content" key="{{note.id}}"> {{note.content}} </textarea>
+      <input name="title" class="card-title" value="{{note.title}}" key="{{note.id}}"/>
+      <textarea name="content" class="card-content" value="{{note.content}}" key="{{note.id}}"> {{note.content}} </textarea>
+
     </form>
 
     <form method="post" action="{% url 'delete' id=note.id %}">
       {% csrf_token %}
+
       <input type="hidden" name="id" value="{{note.id}}" />
-      <button type="submit">
-        <i class="fa fa-trash"></i>
-      </button>
+      <button type="submit"><i class="fa fa-trash"></i></button>
+
     </form>
     
   </div>
